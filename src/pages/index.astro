@@ -1,75 +1,33 @@
 ---
-import Layout from '../components/Layout.astro';
+import IndexLayoutWrapper from "../components/IndexLayoutWrapper.astro";
+import Card from "../components/Card.astro";
 ---
-
-<Layout title="Astro Quickstart">
-	<main>
-      <div class="header">
-        <div class="logo">
-          <img src="https://res.cloudinary.com/dzkoxrsdj/image/upload/v1652291187/astro_1_c1yk5a.png">
+<IndexLayoutWrapper title="Luis Alfredo's Blog">
+<div class="container">
+  <div class="p-5 text-center opacity-25">
+    <div class="mask" style="background-color: rgba(0, 0, 0, 0.6);">
+      <div class="d-flex justify-content-center align-items-center h-100">
+        <div class="text-white">
+          <h1 class="mb-3">leonvillapun.com</h1>
+          <h4 class="mb-3">My personal blog</h4>
         </div>
       </div>
-			<div class="resource-list">
-        <h2>
-            Here are some resources to help you on your Astro + Netlify journey:
-        </h2>
-        <ul>
-          <li>
-            <a href="https://github.com/netlify-templates/astro-quickstart">The Astro Quickstart repo</a>
-          </li>
-          <li>
-            <a href="https://ntl.fyi/38O9wmY">Netlify Blog: Astro posts</a>
-						</li>
-          <li>
-            <a href="https://ntl.fyi/3KHGtyz">Netlify Docs</a>
-          </li>
-          <li>
-            <a href="https://docs.astro.build/en/getting-started/">Astro Docs</a>
-          </li>
-        </ul>
+    </div>
+  </div>
+  <div class="p-5 text-center opacity-25">
+    <div class="mask" style="background-color: rgba(0, 0, 0, 0.6);">
+      <div class="d-flex justify-content-center align-items-center h-100">
+        <div class="text-white">
+          <div class="row">
+          <div class="col"><Card cardtitle="About Me" cardimage="/luisleon1_small.jpeg" cardtext="" cardbutton="About Me" /></div>
+          <div class="col"><Card cardtitle="Data and Code" cardimage="/code.svg" cardtext="" cardbutton="Data and Code" /></div>
+          
+          <div class="col"><Card cardtitle="Books and Movies" cardimage="/books.jpg" cardtext="" cardbutton="Books and Movies" /></div>
+          <div class="col"><Card cardtitle="Miscellaneus" cardimage="/miscellaneus.png" cardtext="" cardbutton="Miscellaneus" /></div>
+          </div>
+        </div>
       </div>
-      <footer class="footer">
-        Made with <a href="https://ntl.fyi/3P0dwBi"><img src="https://res.cloudinary.com/dzkoxrsdj/image/upload/v1646714899/netliheart_ezlkim.svg" alt="Netlify Logo" /></a> for you!
-      </footer>
-	</main>
-</Layout>
-<style>
-  html {
-		background-color: unset;
-	}
-	.logo img {
-    padding: 30px 0;
-    width: 100%;
-  }
-
-  .resource-list {
-    font-family: Helvetica, Arial, sans-serif;
-    font-size: larger;
-    padding: 10px;
-    text-align: center;
-  }
-
-  .resource-list ul {
-      text-align: left;
-      margin: 0 auto;
-      width: 300px;
-  }
-
-  .resource-list a {
-    color: black;
-    line-height: 30px;
-  }
-
-  footer {
-    bottom: 10px;
-    font-family: Helvetica, Arial, sans-serif;
-    margin: 0 auto;
-    width: 100%;
-    position: fixed;
-    text-align: center;
-  }
-
-  footer img {
-      width: 20px;
-  }
-</style>
+    </div>
+  </div>
+</div>
+</IndexLayoutWrapper>

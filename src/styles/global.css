@@ -1,0 +1,45 @@
+.bg{
+   background-image: url("/luisleon3.jpg");
+   /* Full height */
+   height: 100%;
+ 
+   /* Center and scale the image nicely */
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: cover;
+}
+
+.blog-header{
+   background-color: lightgray;
+}
+
+.header-right{
+   float: right;
+}
+
+.header-left{
+   float: left;
+}
+
+.header-title{
+   font-size: 3vw;
+}
+
+.header-button{
+   font-size: 1vw;
+}
+
+.navbar {
+   transition: all 0.4s;
+}
+
+@media screen and (max-width: 500px) {
+   .header a {
+     float: none;
+     display: block;
+     text-align: left;
+   }
+   .header-right {
+     float: none;
+   }
+ }
