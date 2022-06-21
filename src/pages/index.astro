@@ -3,31 +3,33 @@ import IndexLayoutWrapper from "../components/IndexLayoutWrapper.astro";
 import Card from "../components/Card.astro";
 ---
 <IndexLayoutWrapper title="Luis Alfredo's Blog">
-<div class="container">
-  <div class="p-5 text-center opacity-25">
-    <div class="mask" style="background-color: rgba(0, 0, 0, 0.6);">
-      <div class="d-flex justify-content-center align-items-center h-100">
-        <div class="text-white">
-          <h1 class="mb-3">leonvillapun.com</h1>
-          <h4 class="mb-3">My personal blog</h4>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="p-5 text-center opacity-25">
-    <div class="mask" style="background-color: rgba(0, 0, 0, 0.6);">
-      <div class="d-flex justify-content-center align-items-center h-100">
-        <div class="text-white">
-          <div class="row">
-          <div class="col"><Card cardtitle="About Me" cardimage="/luisleon1_small.jpeg" cardtext="" cardbutton="About Me" /></div>
-          <div class="col"><Card cardtitle="Data and Code" cardimage="/code.svg" cardtext="" cardbutton="Data and Code" /></div>
-          
-          <div class="col"><Card cardtitle="Books and Movies" cardimage="/books.jpg" cardtext="" cardbutton="Books and Movies" /></div>
-          <div class="col"><Card cardtitle="Miscellaneus" cardimage="/miscellaneus.png" cardtext="" cardbutton="Miscellaneus" /></div>
+  <div class="row">
+    <div class="col-md-6"></div>
+    <div class="col-md-6 d-inline-block container-opacity" style="height: 88vh;">
+      <div class="opacity-50">
+        <div class="mask" style="background-color: rgba(0,0,0, 0,6);">
+          <div class="row justify-content-center"><div class="d-flex p-5 text-center"><h1 class="display-2 text-responsive">leonvillapun.com</h1></div></div>
+          <div class="row justify-content-center">
+            Welcome to my webpage. This is a space to write about my passions and hobbies. I'll try to post regularly about my projects and also about everything that catches my interest. Thanks for visiting!
+          </div>
+          <br/>
+          <div class="row justify-content-center">
+            <div class="col-md-12"><Card cardbutton="" cardlink="/about" cardtext="A deeper dive into my objectives, hobbies, and core values." cardtitle="About Me" /></div>
+          </div>
+          <br/>
+          <div class="row justify-content-center">
+            <div class="col-md-12"><Card cardbutton="" cardlink="/dataaandcode/all" cardtext="Projects and tutorials. Knowledge exchange." cardtitle="Data and Code" /></div>
+          </div>
+          <br/>
+          <div class="row justify-content-center">
+            <div class="col-md-12"><Card cardbutton="" cardlink="/booksandmovies/all" cardtext="Synopsis, opinion articles and special commentaries." cardtitle="Books and Movies" /></div>
+          </div>
+          <br/>
+          <div class="row justify-content-center">
+            <div class="col-md-12"><Card cardbutton="" cardlink="/miscellaneus/all" cardtext="A special place to share my thoughts and opinions on every other topic." cardtitle="Miscellaneus" /></div>
+          </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-</div>
 </IndexLayoutWrapper>

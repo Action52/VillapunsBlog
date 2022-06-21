@@ -1,5 +1,6 @@
 ---
 layout: ../components/MainLayoutWrapper.astro
+title: "about_me"
 ---
 <h1><center>About Me</center></h1>
 <hr>
