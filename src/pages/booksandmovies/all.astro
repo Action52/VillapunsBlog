@@ -1,13 +1,7 @@
 ---
 import MainLayoutWrapper from "../../components/MainLayoutWrapper.astro";
-const postsDataAndCode = await Astro.glob(`../../pages/dataandcode/*.md`);
-const postsBooksAndMovies = await Astro.glob(`../../pages/booksandmovies/*.md`);
-const postsMisc = await Astro.glob(`../../pages/miscellaneus/*.md`);
-
+import ListArticles from "../../components/ListArticles.astro";
 ---
 <MainLayoutWrapper title="All Books and Movies posts." category="Books and Movies">
-<h2>All articles books and movies</h2>
-<ul>
-  {postsBooksAndMovies.map(post => <a href={post.url}><li>{post.frontmatter.title}</li></a>)}
-</ul>
+<ListArticles title="All Articles Books and Movies" category="booksandmovies"></ListArticles>
 </MainLayoutWrapper>

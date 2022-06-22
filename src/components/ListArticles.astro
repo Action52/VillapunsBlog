@@ -1,0 +1,45 @@
+---
+export interface Props {
+	title: string;
+   author?: string;
+   date?: string;
+   category: string;
+}
+const { title, author, date, category } = Astro.props as Props;
+
+var posts;
+if(category=='booksandmovies'){
+   posts = await Astro.glob(`../pages/booksandmovies/*.md`);
+}
+else if(category == 'dataandcode'){
+   posts = await Astro.glob(`../pages/dataandcode/*.md`);
+}
+else if(category == 'miscellaneus'){
+    posts = await Astro.glob(`../pages/miscellaneus/*.md`);  
+}
+
+const postsSorted = posts.sort(
+  (objA, objB) => new Date(objB.frontmatter.date).getTime() - new Date(objA.frontmatter.date).getTime(),
+);
+
+---
+<h2>{title}</h2>
+<hr/>
+<table class="table table-hover align-middle mb-0 bg-white">
+<thead>
+  <tr class="blue">
+    <th class="tg-0lax"><i class="fas fa-align-center white-text"></i></th>
+    <th class="tg-0lax"><i class="far fa-calendar-alt white-text"></i></th>
+    <th class="tg-0lax"><i class="far fa-clone white-text"></i></th>
+  </tr>
+</thead>
+<tbody>
+   {postsSorted.map(
+      post => 
+      <tr>
+         <td><a class="" href={post.url}>{post.frontmatter.title}</a></td>
+         <td>{post.frontmatter.date}</td>
+         <td>{post.frontmatter.category}</td>
+      </tr>)}
+</tbody>
+</table>
