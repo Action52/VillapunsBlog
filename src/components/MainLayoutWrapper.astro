@@ -1,16 +1,15 @@
 ---
 import Header from "./Header.astro";
 import Footer from "./Footer.astro";
+import ShareLayout from "./ShareLayout.astro";
 import "@fortawesome/fontawesome-free/css/all.css";
 import "mdbootstrap/css/bootstrap.min.css";
 import 'mdbootstrap/css/mdb.min.css';
 import "mdbootstrap/css/style.css";
-
 export interface Props {
 	title: string;
    category: string;
 }
-
 const { title, category } = Astro.props as Props;
 
 ---

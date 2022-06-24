@@ -1,5 +1,7 @@
 ---
 layout: ../components/MainLayoutWrapper.astro
+setup: | 
+   import ShareLayout from "../components/ShareLayout.astro";
 title: "about_me"
 ---
 <h1><center>About Me</center></h1>
@@ -30,4 +32,3 @@ My other passion is chess. I love playing chess on my free time. Even though I'm
 <center><img class ="img-fluid w-25 h-25 col" src="/yochess.jpg"/ ><img class ="img-fluid w-50 h-50 col" src="/estadio.jpg"/ ></center>
 <br/>
 I'd say my other hobbies are reading and watching movies. I'll try to post often in this webpage my opinions on the books and movies I like (or not). I'm a history nerd, so any recommendations on historical books are always welcome. For the movies, you'll always get me with a good space sci-fi movie.
-<hr/>

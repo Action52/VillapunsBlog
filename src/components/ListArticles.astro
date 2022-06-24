@@ -8,20 +8,25 @@ export interface Props {
 const { title, author, date, category } = Astro.props as Props;
 
 var posts;
-if(category=='booksandmovies'){
-   posts = await Astro.glob(`../pages/booksandmovies/*.md`);
-}
-else if(category == 'dataandcode'){
-   posts = await Astro.glob(`../pages/dataandcode/*.md`);
-}
-else if(category == 'miscellaneus'){
-    posts = await Astro.glob(`../pages/miscellaneus/*.md`);  
-}
-
-const postsSorted = posts.sort(
-  (objA, objB) => new Date(objB.frontmatter.date).getTime() - new Date(objA.frontmatter.date).getTime(),
+var postsSorted;
+try{
+   if(category=='booksandmovies'){
+      posts = await Astro.glob(`../pages/booksandmovies/*.md`);
+   }
+   else if(category == 'dataandcode'){
+      posts = await Astro.glob(`../pages/dataandcode/*.md`);
+   }
+   else if(category == 'miscellaneus'){
+      posts = await Astro.glob(`../pages/miscellaneus/*.md`);  
+   }
+   postsSorted = posts.sort(
+      (objA, objB) => new Date(objB.frontmatter.date).getTime() - new Date(objA.frontmatter.date).getTime(),
 );
-
+}
+catch(error){
+   posts = []
+   postsSorted = []
+}
 ---
 <h2>{title}</h2>
 <hr/>
