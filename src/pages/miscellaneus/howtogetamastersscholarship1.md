@@ -31,4 +31,4 @@ Let me finish the list by stressing that even if at some point you discover that
 <hr>
 <h3>So...is graduate school for me?</h3>
 <br/>
-As you might have noticed, this series of steps begin many years prior to even applying to graduate school. If your degree and areas of interest are research-intensive and highly technical, and you are a person who is interested in getting to know many different cultures (a must nowadays), likes formal methods of education, and is generally keen to go back to the old school days, then you should seriously consider studying a master's degree.
+As you might have noticed, these series of steps begin many years prior to even applying to graduate school. If your degree and areas of interest are research-intensive and highly technical, and you are a person who is interested in getting to know many different cultures (a must nowadays), likes formal methods of education, and is generally keen to go back to the old school days, then you should seriously consider studying a master's degree.
